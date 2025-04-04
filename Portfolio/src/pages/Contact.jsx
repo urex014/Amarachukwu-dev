@@ -40,6 +40,7 @@ const Contact = () => {
       )
       .then(
         () => {
+          console.log("Email sent successfully");
           setLoading(false);
           showAlert({
             show: true,
@@ -48,6 +49,7 @@ const Contact = () => {
           });
 
           setTimeout(() => {
+            console.log("Timeout");
             hideAlert(false);
             setCurrentAnimation("idle");
             setForm({
@@ -58,6 +60,7 @@ const Contact = () => {
           }, [3000]);
         },
         (error) => {
+          console.log("Email sending failed", error);
           setLoading(false);
           console.error(error);
           setCurrentAnimation("idle");
