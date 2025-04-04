@@ -163,8 +163,8 @@ export const projects = [
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Webflix',
-        description: 'Built a complete clone of Netflix, allowing users to access their favorite movies and series.',
+        name: 'E-commerce',
+        description: 'A fullstack e-commerce website to make sales easier for your business',
         link: 'https://github.com/urex014',
     },
     {
