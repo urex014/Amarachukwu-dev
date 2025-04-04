@@ -16,7 +16,7 @@ const Projects = () => {
 
       <p className='text-slate-500 mt-2 leading-relaxed'>
         I have embarked on projects that have challenged me and helped me grow as a
-        developer in one year(<b>some of them are still a work in progress)</b>. Here are some of my favorites:
+        developer in one year<b>(SOME OF THEM ARE STILL A WORK IN PROGRESS SO THE LINK WONT WORK!)</b>. Here are some of my favorites:
       </p>
 
       <div className='flex flex-wrap my-20 gap-16'>
@@ -56,6 +56,8 @@ const Projects = () => {
             </div>
           </div>
         ))}
+        <p className="text-red-500 mt-2 leading-relaxed"><b>SOME OF THESE PROJECTS ARE STILL A WORK IN PROGESS SO THE LINKS WONT WORK</b> because its in a private repository</p>
+        
       </div>
 
       <hr className='border-slate-200' />
