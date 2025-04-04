@@ -24,7 +24,7 @@ const HomeInfo = ({ currentStage }) => {
           Worked with many experts <br /> and picked up many skills along the way
         </p>
 
-        <Link to='/about' className='neo-brutalism-white neo-btn'>
+        <Link to='/about' className='neo-brutalism-white neo-btn '>
           Learn more
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
         </Link>

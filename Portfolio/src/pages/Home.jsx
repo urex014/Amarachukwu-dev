@@ -110,7 +110,7 @@ const Home = () => {
           alt='jukebox'
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
           className='w-10 h-10 cursor-pointer object-contain'
-        />
+        /><p className="text-slate-700"><b>start/stop music</b></p>
       </div>
     </section>
   );
