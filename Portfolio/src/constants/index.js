@@ -142,9 +142,9 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Todo App',
-        description: 'Developed a web application that tracks tasks and deadlined',
-        link: 'https://github.com/urex.014/todo-app',
+        name:'Apple website clone',
+        description: 'putting my frontend skills to the test with this project',
+        link: 'https://github.com/urex014/Apple-website-clone',
     },
     {
         iconUrl: threads,
@@ -172,6 +172,6 @@ export const projects = [
         theme: 'btn-back-yellow',
         name: 'Connect Ai',
         description: 'My Ai model.',
-        link: 'https://github.com/urex014',
+        link: 'https://github.com/urex014/Connect-Ai',
     }
 ];
