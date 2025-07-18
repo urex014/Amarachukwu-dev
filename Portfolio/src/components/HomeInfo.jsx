@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { arrow } from "../assets/icons";
 
+
 const HomeInfo = ({ currentStage }) => {
   if (currentStage === 1)
     return (
@@ -11,7 +12,7 @@ const HomeInfo = ({ currentStage }) => {
           <span className='font-semibold mx-2 text-white'>Amarachukwu</span>
           👋
           <br />
-          A Full stack developer from Nigeria <br/> <b>⬅️SCROLL SIDEWAYS➡️</b>
+          A Full stack developer from Nigeria <br/> <b>SCROLL SIDEWAYS/ARROW-KEYS</b>
         </h1>
         
       </div>
