@@ -14,7 +14,7 @@ export default function Resume(){
         document.body.removeChild(link);
     }
     return (
-        <section className="relative flex lg:flex-row flex-col max-container">
+        <section className="relative flex lg:flex-col flex-col max-container">
             <h1 className="text-3xl font-bold text-center my-8">Resume</h1>
             <img src={resume} alt="Resume" className="w-full h-auto max-w-2xl mx-auto mb-8 rounded-lg shadow-lg" />
             <button onClick={downloadResume} className="btn text-center b-4">Download my resume here.</button>
