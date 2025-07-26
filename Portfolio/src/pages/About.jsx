@@ -4,6 +4,7 @@ import {
   } from "react-vertical-timeline-component";
   
   import { CTA } from "../components";
+  import { flyer } from "../assets/images";
   import { experiences, skills } from "../constants";
   
   import "react-vertical-timeline-component/style.min.css";
@@ -22,9 +23,17 @@ import {
   
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-            Fullstack developer based in Nigeria, specializing in building web and app solutions
-            for your business
+            Hey! I’m a full-stack developer based in Nigeria. I build web and mobile app solutions that help businesses and startups grow and stand out online.
+
+            I work mainly with React, Next.js, Tailwind CSS, Node.js, Express, MongoDB, and React Native. I also create 3D web experiences using Three.js, and I’m currently learning AI/ML to explore how smart tech can be built into real-world products.
+
+            I'm also building Connect, my own tech consultancy startup focused on creating bold, useful, and culture-driven digital solutions.
+
+            If you’re looking to build something powerful, creative, and user-focused — let’s talk!<br /> <br/>
+
+            <span className="cta-text mt-5">Check out my Startup!</span>
           </p>
+          <img src={flyer} />
         </div>
   
         <div className='py-10 flex flex-col'>

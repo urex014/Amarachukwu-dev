@@ -5,6 +5,8 @@ import starbucks from './starbucks.png'
 import tesla from './tesla.png'
 import logo from './logo.svg'
 import resume from './resume.jpg'
+import flyer from './connectFlyer.jpg'
+
 
 export {
     hero,
@@ -12,6 +14,7 @@ export {
     shopify,
     starbucks,
     tesla,
+    flyer,
     logo,
     resume
 }
