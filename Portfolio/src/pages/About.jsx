@@ -34,6 +34,7 @@ import {
             <span className="cta-text mt-5">Check out my Startup!</span>
           </p>
           <img src={flyer} />
+          <a href="https://www.connct.name.ng" className="blue-gradient_text">This is the link!</a>
         </div>
   
         <div className='py-10 flex flex-col'>
