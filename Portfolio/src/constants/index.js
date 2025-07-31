@@ -140,13 +140,13 @@ export const projects = [
         description: 'putting my frontend skills to the test with this project',
         link: 'https://apple-website-clone-lake.vercel.app/',
     },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Connected',
-        description: 'An ai powered job application tracking system',
-        link: 'https://github.com/urex014/connect-flask',
-    },
+    // {
+    //     iconUrl: threads,
+    //     theme: 'btn-back-green',
+    //     name: 'Connected',
+    //     description: 'An ai powered job application tracking system',
+    //     link: 'https://github.com/urex014/connect-flask',
+    // },
     // {
     //     iconUrl: car,
     //     theme: 'btn-back-blue',
@@ -154,18 +154,18 @@ export const projects = [
     //     description: 'An Uber clone with the aim of refining my fullstack skills',
     //     link: 'https://github.com/urex014',
     // },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'E-commerce',
-        description: 'A fullstack e-commerce website to make sales easier for your business',
-        link: 'https://github.com/urex014/Connect-marketplace',
-    },
+    // {
+    //     iconUrl: snapgram,
+    //     theme: 'btn-back-pink',
+    //     name: 'E-commerce',
+    //     description: 'A fullstack e-commerce website to make sales easier for your business',
+    //     link: 'https://github.com/urex014/Connect-marketplace',
+    // },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
-        name: 'Connect Ai',
-        description: 'A saas website that allows you learn with ai',
-        link: 'https://github.com/urex014/connect-saas.git',
+        name: '3d-globe',
+        description: 'A depiction of the earth using three.js and interactivity using machine learning. move your hands to move the earth. pinch your hand to zoom in ',
+        link: 'https://3d-globe-pink.vercel.app',
     }
 ];
