@@ -140,13 +140,13 @@ export const projects = [
         description: 'putting my frontend skills to the test with this project',
         link: 'https://apple-website-clone-lake.vercel.app/',
     },
-    // {
-    //     iconUrl: threads,
-    //     theme: 'btn-back-green',
-    //     name: 'Connected',
-    //     description: 'An ai powered job application tracking system',
-    //     link: 'https://github.com/urex014/connect-flask',
-    // },
+    {
+        iconUrl: threads,
+        theme: 'btn-back-green',
+        name: '3d-model',
+        description: 'a 3d model controlled by hand gestures',
+        link: 'https://3d-model-mu.vercel.app',
+    },
     // {
     //     iconUrl: car,
     //     theme: 'btn-back-blue',
