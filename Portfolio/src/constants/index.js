@@ -154,13 +154,13 @@ export const projects = [
     //     description: 'An Uber clone with the aim of refining my fullstack skills',
     //     link: 'https://github.com/urex014',
     // },
-    // {
-    //     iconUrl: snapgram,
-    //     theme: 'btn-back-pink',
-    //     name: 'E-commerce',
-    //     description: 'A fullstack e-commerce website to make sales easier for your business',
-    //     link: 'https://github.com/urex014/Connect-marketplace',
-    // },
+    {
+        iconUrl: snapgram,
+        theme: 'btn-back-pink',
+        name: 'Curated',
+        description: 'A curated learning hub powered by YouTube. Bringing together the best educational videos from across the platform, organize them into structured paths, and filter out the noise so you can focus on learning',
+        link: 'https://devcurated.vercel.app/',
+    },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
