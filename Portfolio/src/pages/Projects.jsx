@@ -34,8 +34,17 @@ const Projects = () => {
             </div>
 
             <div className='mt-5 flex flex-col'>
-              <h4 className='text-2xl font-poppins font-semibold'>
+              <h4 className='text-2xl flex flex-row font-poppins font-semibold'>
                 {project.name}
+                <span className="mx-3 justify-center items-center flex">
+                  {
+                    project.status?(
+                      <p className="blue-gradient_text">Completed</p>
+                    ):(
+                      <p className="text-red-500 font-semibold text-sm">Work in progress...</p>
+                    )
+                  }
+                </span>
               </h4>
               <p className='mt-2 text-slate-500'>{project.description}</p>
               <div className='mt-5 flex items-center gap-2 font-poppins'>

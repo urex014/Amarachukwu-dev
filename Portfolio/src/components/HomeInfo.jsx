@@ -9,10 +9,10 @@ const HomeInfo = ({ currentStage }) => {
       <div>
         <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
           Hi, I'm
-          <span className='font-semibold mx-2 text-white'>Amarachukwu</span>
+          <span className='font-semibold mx-2 text-gray-200'>Amarachukwu</span>
           👋
           <br />
-          A Full stack developer from Nigeria <br/> <b>SCROLL SIDEWAYS/ARROW-KEYS</b>
+          A Full stack developer from Nigeria <br/> <b>⬅️SCROLL SIDEWAYS➡️</b>
         </h1>
         
       </div>
