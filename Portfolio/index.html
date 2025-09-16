@@ -34,7 +34,7 @@
   <!-- <link href="./output.css" rel="stylesheet"> -->
 </head>
 
-<body class="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-[#f8fafc] overflow-x-hidden min-h-screen">
+<body class="bg-gradient-to-br from-black to-dark-900 text-[#f8fafc] overflow-x-hidden min-h-screen">
   <!-- Progress Bar -->
   <div class="progress-bar fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-50"></div>
 
@@ -85,8 +85,10 @@
 
   <!-- Hero Section -->
   <section id="hero"
-    class="hero h-screen w-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden bg-gradient-to-br from-dark-900 to-dark-800">
-  
+    class="hero border-none h-screen w-screen py-24 flex justify-center relative overflow-hidden">
+    <div
+      class="absolute w-[350px] h-[350px] bg-gradient-radial from-blue-500/30 to-transparent -top-20 -right-20 blur-3xl z-0">
+    </div>
     <!-- Globe Canvas as background -->
     <div class="globe-canvas pointer-events-none absolute inset-0 -z-2 w-[1000px] h-[950px] "></div>
   
@@ -100,7 +102,7 @@
         </h1>
         <p id="typing-text" class="text-xl md:text-2xl text-light-200 max-w-2xl mb-10 mx-auto leading-relaxed">
         </p>
-        <button
+        <button  
           class="cta-button bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 py-4 px-12 text-lg rounded-full font-semibold cursor-pointer relative z-10 transition-all duration-350 ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40">
           Find out more
         </button>
@@ -111,12 +113,16 @@
 
   <!-- Laptop Section -->
   <section class="laptop-section h-screen flex justify-center items-center relative">
-    <div id="laptop-container" class="w-full h-full absolute top-0 left-0"></div>
+    <div id="laptop-container" class="w-full h-full absolute top-0 left-0">
+      <div
+        class="absolute w-[400px] h-[400px] bg-gradient-radial from-purple-500/30 to-transparent -top-24 -left-24 blur-3xl z-0">
+      </div>
+    </div>
   </section>
 
   <!-- Desktop Interface -->
   <div
-    class="desktop-interface fixed top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat z-50 opacity-0 invisible transition-opacity duration-1000 ease-in-out"
+    class="desktop-interface fixed top-0 left-0 w-full overflow-hidden h-full bg-cover bg-center bg-no-repeat z-50 opacity-0 invisible transition-opacity duration-1000 ease-in-out"
     style="background-image: url('https://wallpaperaccess.com/full/84248.png')">
     <div class="desktop-icons absolute top-5 left-5 flex flex-col gap-6">
       <div
