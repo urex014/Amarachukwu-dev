@@ -87,7 +87,7 @@
     class="hero h-screen w-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden bg-gradient-to-br from-dark-900 to-dark-800">
   
     <!-- Globe Canvas as background -->
-    <div class="globe-canvas pointer-events:none absolute inset-0 -z-2 w-[1000px] h-[950px] "></div>
+    <div class="globe-canvas pointer-events-none absolute inset-0 -z-2 w-[1000px] h-[950px] "></div>
   
     <!-- Hero content -->
     <div class="hero-content relative z-10 flex flex-col lg:flex-row items-center justify-center gap-12">
@@ -101,7 +101,7 @@
         </p>
         <button
           class="cta-button bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 py-4 px-12 text-lg rounded-full font-semibold cursor-pointer relative z-10 transition-all duration-350 ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40">
-          Learn More
+          Find out more
         </button>
       </div>
     </div>
@@ -171,8 +171,14 @@
         <i class="fab fa-windows"></i>
         <span>Start</span>
       </button>
+      <button
+        class="h-10 ml-4 px-4 bg-gradient-to-b from-gray-400 to-gray-300 border-0 rounded-full w-[170px] text-white flex items-center gap-2 font-medium cursor-pointer">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <span>Search</span>
+      </button>
     </div>
   </div>
+  
 
   <!-- About Section -->
   <section id="about" class="content-section min-h-screen py-24 flex flex-col justify-center"></section>
