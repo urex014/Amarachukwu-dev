@@ -58,7 +58,7 @@ globeControls.dampingFactor = 0.05;
 
 function animateGlobe() {
   requestAnimationFrame(animateGlobe);
-  globe.rotation.y += 0.001;
+  globe.rotation.y += 0.005;
   globeControls.update();
   globeRenderer.render(globeScene, globeCamera);
 }

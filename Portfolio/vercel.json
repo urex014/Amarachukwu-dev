@@ -1,7 +1,3 @@
 {
-  "redirects": [
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/projects", "destination": "/work.html" }
-  ]
+  "cleanUrls": true
 }
