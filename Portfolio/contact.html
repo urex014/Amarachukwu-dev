@@ -8,6 +8,13 @@
   <title>Contact - Amarachukwu Onuoha</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC-KEY); // Replace with your public key
+    })();
+  </script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -92,6 +99,21 @@
   
     <!-- Hero Content -->
      <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Stop default form submission
+
+            const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateID =  import.meta.env.VITE_TEMPLATE_ID;
+
+            emailjs.sendForm(serviceID, templateID, this)
+              .then(() => {
+                document.getElementById("status").innerText = "Message sent successfully!";
+                this.reset();
+              }, (err) => {
+                document.getElementById("status").innerText = "Failed to send message. Try again.";
+                console.error("EmailJS error:", err);
+              });
+          });
       function downloadResume() {
           const link = document.createElement('a');
           link.href = '/resume.pdf';
@@ -122,14 +144,14 @@
     </div>
   
     <div class="container px-5 max-w-3xl relative z-10">
-      <form class="bg-dark-800 p-8 rounded-2xl shadow-xl flex flex-col gap-6">
+      <form id="contact-form" class="bg-dark-800 p-8 rounded-2xl shadow-xl flex flex-col gap-6">
         <div class="flex flex-col md:flex-row gap-4">
-          <input type="text" placeholder="Your Name"
+          <input name="name" type="text" placeholder="Your Name"
             class="flex-1 bg-dark-900 border border-gray-700 rounded-lg px-4 py-3 text-light-100 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input type="email" placeholder="Your Email"
+          <input name="email" type="email" placeholder="Your Email"
             class="flex-1 bg-dark-900 border border-gray-700 rounded-lg px-4 py-3 text-light-100 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
-        <input type="text" placeholder="Subject"
+        <input name="message" type="text" placeholder="Subject"
           class="bg-dark-900 border border-gray-700 rounded-lg px-4 py-3 text-light-100 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         <textarea placeholder="Message" rows="6"
           class="bg-dark-900 border border-gray-700 rounded-lg px-4 py-3 text-light-100 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
