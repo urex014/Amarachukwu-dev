@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+/* Custom Scrollbar for Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;               /* Width of vertical scrollbar */
+  height: 10px;              /* Height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;       /* Zinc-950 (Background color) */
+  border-left: 1px solid #27272a; /* Zinc-800 (Border) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;       /* Zinc-700 (Thumb color) */
+  border: 2px solid #09090b; /* Zinc-950 (Padding effect) */
+  border-radius: 9999px;     /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;       /* Green-500 (Hover effect) */
+}
+
+/* Firefox Scrollbar Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 #09090b;
+}
