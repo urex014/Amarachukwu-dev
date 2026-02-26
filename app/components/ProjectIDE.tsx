@@ -16,37 +16,41 @@ const projects = [
     title: 'Automated Job Applications',
     description: 'A tool to automate job applications by sending emails to recruiters while you sleep',
     tech: ['Next.js', 'TypeScript', 'Express', 'Tailwind'],
-    link: '#',
-    github: 'https://github.com/urex014',
     image: '/Resumify.png' 
   },
   {
     id: 'proj2',
-    filename: 'Cryptic',
+    filename: 'Cryptic.tsx',
     title: 'VTU',
     description: 'Buy utilities with crypto and fiat. No need for exchanges',
     tech: ['Next.js', 'Typescript'],
     link: 'https://cryptic-rho-ten.vercel.app/',
-    github: 'https://github.com/urex014',
     image: '/cryptic.png'
   },
   {
     id: 'proj3',
-    filename: 'PeerLink',
+    filename: 'PeerLink.tsx',
     title: ' p2p market Place',
     description: 'A p2p Marketplace with flexibility.',
     tech: ['Next.js', 'Typescript', 'Express', 'Supabase'],
-    link: '#',
-    github: 'https://github.com/urex014',
     image: '/peerLink.png'
   },
   {
     id:'proj4',
-    filename:'cephas',
+    filename:'cephas.tsx',
     title: 'Brand Page',
     image: '/cephas.png',
     description:'A website for a cloth brand',
     tech: ['Next.js', 'Typescript']
+  },
+  {
+    id:'proj5',
+    filename:'SentryGuard.sol',
+    title: 'Solidity Smart Contract',
+    image: '/sentryGuard.png',
+    github: 'https://github.com/urex014/sentry-guard.git',
+    description: `A decentralized "dead man's switch" that automatically transfers digital assets to a beneficiary if the owner's wallet is inactive for 180 days.`,
+    tech: ['Solidity, foundry, react&typescript, wagmi&viem, connectkit']
   }
 ];
 
@@ -105,6 +109,10 @@ export default function ProjectIDE() {
                       <FileCode size={14} className={
                         project.filename.endsWith('tsx') ? 'text-blue-400' :
                         project.filename.endsWith('py') ? 'text-yellow-400' : 
+                        project.filename.endsWith('sol') ? 'text-purple-400' :
+                        project.filename.endsWith('js') ? 'text-yellow-400' :
+                        project.filename.endsWith('ts') ? 'text-blue-400' :
+                        project.filename.endsWith('jsx') ? 'text-blue-300' :
                         'text-orange-400'
                       } />
                       {project.filename}
@@ -132,7 +140,11 @@ export default function ProjectIDE() {
               >
                 <FileCode size={14} className={
                     project.filename.endsWith('tsx') ? 'text-blue-400' :
+                    project.filename.endsWith('js') ? 'text-yellow-400' :
+                    project.filename.endsWith('ts') ? 'text-blue-400' :
+                    project.filename.endsWith('jsx') ? 'text-blue-300' :
                     project.filename.endsWith('py') ? 'text-yellow-400' : 
+                    project.filename.endsWith('sol') ? 'text-purple-400' :
                     'text-orange-400'
                   } />
                 {project.filename}
@@ -226,12 +238,17 @@ export default function ProjectIDE() {
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                    <a href={activeProject.link} className="p-2 bg-white text-black rounded-full hover:scale-110 transition-transform">
-                      <ExternalLink size={20} />
-                    </a>
-                    <a href={activeProject.github} className="p-2 bg-zinc-800 text-white rounded-full hover:scale-110 transition-transform">
-                      <Github size={20} />
-                    </a>
+                    {activeProject.link && (
+                      <a href={activeProject.link} className="p-2 bg-white text-black rounded-full hover:scale-110 transition-transform">
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
+
+                    {activeProject.github && (
+                      <a href={activeProject.github} className="p-2 bg-zinc-800 text-white rounded-full hover:scale-110 transition-transform">
+                        <Github size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
 
