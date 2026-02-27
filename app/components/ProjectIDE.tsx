@@ -57,7 +57,7 @@ const projects = [
     filename:"RecEng.py",
     title:"AI Recommendation Engine",
     image:"/RecEng.png",
-    dedcription:"An AI-native e-commerce backend utilizing a Python FastAPI vision model (ONNX/ResNet50) to extract image vectors, orchestrated by Node.js, and queried via PostgreSQL (pgvector) for real-time cosine similarity search.",
+    description:"An AI-native e-commerce backend utilizing a Python FastAPI vision model (ONNX/ResNet50) to extract image vectors, orchestrated by Node.js, and queried via PostgreSQL (pgvector) for real-time cosine similarity search.",
     github:"https://github.com/urex014/RecEng.git",
     tech:['python, nodejs, nextjs, onnx, resnet50, pgvector']
   }
