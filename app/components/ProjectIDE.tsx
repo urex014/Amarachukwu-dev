@@ -35,14 +35,14 @@ const projects = [
     tech: ['Next.js', 'Typescript', 'Express', 'Supabase'],
     image: '/peerLink.png'
   },
-  {
-    id:'proj4',
-    filename:'cephas.tsx',
-    title: 'Brand Page',
-    image: '/cephas.png',
-    description:'A website for a cloth brand',
-    tech: ['Next.js', 'Typescript']
-  },
+  // {
+  //   id:'proj4',
+  //   filename:'cephas.tsx',
+  //   title: 'Brand Page',
+  //   image: '/cephas.png',
+  //   description:'A website for a cloth brand',
+  //   tech: ['Next.js', 'Typescript']
+  // },
   {
     id:'proj5',
     filename:'SentryGuard.sol',
@@ -51,6 +51,15 @@ const projects = [
     github: 'https://github.com/urex014/sentry-guard.git',
     description: `A decentralized "dead man's switch" that automatically transfers digital assets to a beneficiary if the owner's wallet is inactive for 180 days.`,
     tech: ['Solidity, foundry, react&typescript, wagmi&viem, connectkit']
+  },
+  {
+    id:"proj6",
+    filename:"RecEng.py",
+    title:"AI Recommendation Engine",
+    image:"/RecEng.png",
+    dedcription:"An AI-native e-commerce backend utilizing a Python FastAPI vision model (ONNX/ResNet50) to extract image vectors, orchestrated by Node.js, and queried via PostgreSQL (pgvector) for real-time cosine similarity search.",
+    github:"https://github.com/urex014/RecEng.git",
+    tech:['python, nodejs, nextjs, onnx, resnet50, pgvector']
   }
 ];
 
