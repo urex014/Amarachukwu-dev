@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FileCode, Github, ExternalLink, ChevronRight, ChevronDown, Menu, ArrowLeft, Router } from 'lucide-react';
 import {useRouter} from 'next/navigation';
+import { image } from 'framer-motion/client';
 
 // --- DATA: Your Projects ---
 const projects = [
@@ -27,14 +28,14 @@ const projects = [
     link: 'https://cryptic-rho-ten.vercel.app/',
     image: '/cryptic.png'
   },
-  {
-    id: 'proj3',
-    filename: 'PeerLink.tsx',
-    title: ' p2p market Place',
-    description: 'A p2p Marketplace with flexibility.',
-    tech: ['Next.js', 'Typescript', 'Express', 'Supabase'],
-    image: '/peerLink.png'
-  },
+  // {
+  //   id: 'proj3',
+  //   filename: 'PeerLink.tsx',
+  //   title: ' p2p market Place',
+  //   description: 'A p2p Marketplace with flexibility.',
+  //   tech: ['Next.js', 'Typescript', 'Express', 'Supabase'],
+  //   image: '/peerLink.png'
+  // },
   // {
   //   id:'proj4',
   //   filename:'cephas.tsx',
@@ -60,6 +61,15 @@ const projects = [
     description:"An AI-native e-commerce backend utilizing a Python FastAPI vision model (ONNX/ResNet50) to extract image vectors, orchestrated by Node.js, and queried via PostgreSQL (pgvector) for real-time cosine similarity search.",
     github:"https://github.com/urex014/RecEng.git",
     tech:['python, nodejs, nextjs, onnx, resnet50, pgvector']
+  },
+  {
+    id:"proj7",
+    filename:"Zerogate.sol",
+    image:"/zerogate.png",
+    title:"Zerogate - Marketplace for all",
+    description: "ZeroGate is a next-generation Web3 marketplace that combines AI-powered visual search with secure, smart-contract escrow for trading physical and digital assets.",
+    github:"https://github.com/urex014/zerogate.git",
+    tech: ["Next.js", "Node", "Python", "Solidity", "PostgreSQL" + "pgvector"]
   }
 ];
 
@@ -248,13 +258,13 @@ export default function ProjectIDE() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                     {activeProject.link && (
-                      <a href={activeProject.link} className="p-2 bg-white text-black rounded-full hover:scale-110 transition-transform">
+                      <a target='_blank' rel='noopener noreferrer' href={activeProject.link} className="p-2 bg-white text-black rounded-full hover:scale-110 transition-transform">
                         <ExternalLink size={20} />
                       </a>
                     )}
 
                     {activeProject.github && (
-                      <a href={activeProject.github} className="p-2 bg-zinc-800 text-white rounded-full hover:scale-110 transition-transform">
+                      <a target='_blank' rel='noopener noreferrer' href={activeProject.github} className="p-2 bg-zinc-800 text-white rounded-full hover:scale-110 transition-transform">
                         <Github size={20} />
                       </a>
                     )}
