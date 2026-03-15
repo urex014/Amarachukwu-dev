@@ -17,6 +17,7 @@ const projects = [
     title: 'Automated Job Applications',
     description: 'A tool to automate job applications by sending emails to recruiters while you sleep',
     tech: ['Next.js', 'TypeScript', 'Express', 'Tailwind'],
+    link: 'https://resumify-teal.vercel.app'
     image: '/Resumify.png' 
   },
   {
