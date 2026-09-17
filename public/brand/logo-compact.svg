@@ -1,0 +1,36 @@
+<svg viewBox="0 0 520 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="compact-keyway">
+      <rect width="160" height="160" fill="white" />
+      <path d="M 35,136 L 75,26" stroke="black" stroke-width="28" stroke-linecap="square" />
+      <path d="M 99,62 A 38,38 0 0,1 123,99" stroke="black" stroke-width="28" stroke-linecap="round" />
+    </mask>
+  </defs>
+
+  <!-- Left Symbol Monogram -->
+  <g transform="translate(10, 0)">
+    <!-- O Torus Ring -->
+    <circle cx="80" cy="90" r="38" stroke="#111111" stroke-width="16" mask="url(#compact-keyway)" />
+
+    <!-- A Chevron Arch: Left Leg & Apex -->
+    <path d="M 35,136 L 75,26 H 85" stroke="#111111" stroke-width="16" stroke-linecap="square" stroke-linejoin="miter" />
+
+    <!-- A Chevron Arch: Right Leg -->
+    <path d="M 85,26 L 125,136" stroke="#111111" stroke-width="16" stroke-linecap="square" mask="url(#compact-keyway)" />
+
+    <!-- O Torus Ring Front Loop -->
+    <path d="M 104,68 A 38,38 0 0,1 121,102" stroke="#111111" stroke-width="16" stroke-linecap="round" />
+
+    <!-- The Keystone Crossbar (Vivid Neon Green) -->
+    <rect x="56" y="82" width="48" height="15" rx="3" fill="#39FF14" />
+  </g>
+
+  <!-- Right Compact Typographic Lockup -->
+  <g transform="translate(175, 72)">
+    <!-- Compact Name Wordmark -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Geist Sans', 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="900" letter-spacing="-0.025em" fill="#111111" text-transform="uppercase">AMARACHUKWU</text>
+    
+    <!-- Secondary Badge -->
+    <text x="2" y="30" font-family="'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="700" letter-spacing="0.22em" fill="#39FF14" text-transform="uppercase">BUILDER // DEV</text>
+  </g>
+</svg>

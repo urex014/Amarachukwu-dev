@@ -1,0 +1,24 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="ao-keyway-white">
+      <rect width="200" height="200" fill="white" />
+      <path d="M 44,170 L 94,32" stroke="black" stroke-width="36" stroke-linecap="square" />
+      <path d="M 124,78 A 48,48 0 0,1 154,124" stroke="black" stroke-width="36" stroke-linecap="round" />
+    </mask>
+  </defs>
+
+  <!-- O Torus Ring -->
+  <circle cx="100" cy="112" r="48" stroke="#FFFFFF" stroke-width="20" mask="url(#ao-keyway-white)" />
+
+  <!-- A Chevron Arch: Left Leg & Apex -->
+  <path d="M 44,170 L 94,32 H 106" stroke="#FFFFFF" stroke-width="20" stroke-linecap="square" stroke-linejoin="miter" />
+
+  <!-- A Chevron Arch: Right Leg (under O) -->
+  <path d="M 106,32 L 156,170" stroke="#FFFFFF" stroke-width="20" stroke-linecap="square" mask="url(#ao-keyway-white)" />
+
+  <!-- O Torus Ring Front Loop (over right leg) -->
+  <path d="M 130,84 A 48,48 0 0,1 152,128" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" />
+
+  <!-- The Keystone Crossbar (White Monochrome) -->
+  <rect x="70" y="103" width="60" height="18" rx="4" fill="#FFFFFF" />
+</svg>

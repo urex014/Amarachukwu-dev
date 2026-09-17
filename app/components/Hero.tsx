@@ -1,151 +1,163 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import { motion, type Variants } from 'framer-motion';
+import SignatureSymbol from './SignatureSymbol';
 
-export default function TerminalHero() {
-  const [mousePosition, setMousePosition] = useState({ x: -1000, y: -1000 });
-  
-  // State for the typing effect
-  const [text, setText] = useState('');
-  const fullText = "Full Stack Engineer | Next.js Enthusiast | AI/ML | Web3 | Web Automations | Mobile Apps";
-  const [showCursor, setShowCursor] = useState(true);
-  const router = useRouter();
+export default function Hero() {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
+      },
+    },
+  };
 
-  // 1. Mouse & Touch Tracking
-  useEffect(() => {
-    const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    const updateTouchPosition = (e: TouchEvent) => {
-      if (e.touches.length > 0) {
-        setMousePosition({ x: e.touches[0].clientX, y: e.touches[0].clientY });
-      }
-    };
-
-    window.addEventListener('mousemove', updateMousePosition);
-    window.addEventListener('touchmove', updateTouchPosition, { passive: true });
-    return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-      window.removeEventListener('touchmove', updateTouchPosition);
-    };
-  }, []);
-
-  // 2. Typing Logic
-  useEffect(() => {
-    if (text.length < fullText.length) {
-      const timeout = setTimeout(() => {
-        setText(fullText.slice(0, text.length + 1));
-      }, 40); // Speed of typing
-      return () => clearTimeout(timeout);
-    }
-  }, [text]);
-
-  // 3. Blinking Cursor Logic
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
-    return () => clearInterval(interval);
-  }, []);
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.65,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
 
   return (
-    <section className="relative min-h-[100dvh] w-full flex items-center justify-center bg-black py-8 sm:py-12 px-3 sm:px-6 overflow-x-hidden font-mono">
-      
-      {/* --- BACKGROUND LAYER --- */}
-      
-      {/* 1. Subtle Grid (Darker for terminal feel) */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#222_1px,transparent_1px),linear-gradient(to_bottom,#222_1px,transparent_1px)] bg-[size:40px_40px] opacity-20 pointer-events-none"></div>
-
-      {/* 2. The Glow (Follows cursor on desktop/touch, fallback center ambient on mobile) */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-300 hidden sm:block"
-        style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(34, 197, 94, 0.15), transparent 80%)`,
-        }}
-      />
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.08)_0%,transparent_70%)] sm:hidden" />
-
-      {/* --- TERMINAL WINDOW LAYER --- */}
-      <motion.div 
-        initial={{ opacity: 0, y: 15 }}
+    <section className="relative min-h-[92vh] flex flex-col justify-between pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-[#121212]/15">
+      {/* Top Editorial System Dossier Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        className="z-10 w-full max-w-3xl my-auto"
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className="w-full max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 py-3 border-b border-[#121212]/15 font-mono text-[10px] sm:text-[11px] uppercase tracking-widest text-[#5C5A53]"
       >
-        
-        {/* Window Header */}
-        <div className="w-full bg-zinc-900 border border-zinc-800 rounded-t-lg px-3 py-2.5 flex items-center justify-between">
-          <div className="flex items-center gap-2 shrink-0">
-            <div className="w-3 h-3 rounded-full bg-red-500/80" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-            <div className="w-3 h-3 rounded-full bg-green-500/80" />
-          </div>
-          <span className="text-[11px] sm:text-xs text-zinc-500 truncate max-w-[210px] sm:max-w-md select-none">
-            amarachukwuonuoha22@gmail.com:~
-          </span>
-          <span className="hidden sm:inline-block text-[10px] text-zinc-600 font-mono select-none">
-            bash
-          </span>
+        <div className="flex items-center gap-2">
+          <SignatureSymbol size={13} className="text-[#121212]" />
+          <span>PORTFOLIO // VOL. 26</span>
         </div>
-
-        {/* Window Body */}
-        <div className="w-full bg-black/90 border-x border-b border-zinc-800 rounded-b-lg p-4 sm:p-8 md:p-10 backdrop-blur-sm shadow-2xl min-h-[300px] flex flex-col justify-between">
-          
-          <div>
-            {/* Command 1 */}
-            <div className="mb-6 sm:mb-8">
-              <div className="flex items-center gap-2 text-green-500 text-xs sm:text-sm mb-1.5 sm:mb-2">
-                <span>➜</span>
-                <span className="text-blue-400">~</span>
-                <span>whoami</span>
-              </div>
-              <h1 className="text-2xl min-[360px]:text-3xl sm:text-5xl md:text-6xl font-bold text-zinc-100 tracking-tight break-words">
-                Amarachukwu<span className="text-zinc-500">Dev</span>
-              </h1>
-            </div>
-
-            {/* Command 2 (Animated) */}
-            <div className="mb-6 sm:mb-8">
-              <div className="flex items-center gap-2 text-green-500 text-xs sm:text-sm mb-1.5 sm:mb-2">
-                <span>➜</span>
-                <span className="text-blue-400">~</span>
-                <span>cat role.txt</span>
-              </div>
-              {/* Flexible container that adapts to multi-line text without cutoffs or overlapping */}
-              <div className="min-h-[4.5rem] sm:min-h-[3.2rem] md:min-h-[2.5rem]">
-                <p className="text-xs sm:text-base md:text-xl text-zinc-300 leading-relaxed break-words">
-                  {text}
-                  <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-green-500 font-bold ml-0.5`}>
-                    _
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Action Buttons (Styled as commands) */}
-          <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <button 
-              onClick={()=>router.push('/projects')} 
-              className="group relative w-full sm:w-auto px-5 py-3 bg-zinc-900 border border-zinc-700 text-green-400 hover:border-green-500 hover:bg-green-500/10 active:scale-[0.98] transition-all rounded text-center justify-center flex items-center text-xs sm:text-sm cursor-pointer"
-            >
-              <span className="absolute inset-0 w-full h-full bg-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded"></span>
-              ./view_projects.sh
-            </button>
-            
-            <button 
-              onClick={()=>router.push('/contact')} 
-              className="group relative w-full sm:w-auto px-5 py-3 bg-transparent border border-zinc-800 text-zinc-400 hover:text-zinc-200 hover:border-zinc-500 hover:bg-zinc-900/50 active:scale-[0.98] transition-all rounded text-center justify-center flex items-center text-xs sm:text-sm cursor-pointer"
-            >
-              ./contact_me.sh
-            </button>
-          </div>
-
+        <div className="hidden sm:block">
+          <span>06°31′N 003°23′E</span>
+        </div>
+        <div className="text-right sm:text-left">
+          <span>INDEX: 01 — 04</span>
+        </div>
+        <div className="text-right text-[#121212] font-semibold">
+          <span className="inline-block w-2 h-2 rounded-full bg-[#10B981] mr-1.5 animate-pulse" />
+          AVAILABLE FOR BUILD
         </div>
       </motion.div>
-      
+
+      {/* Main Center Typographic Hero */}
+      <div className="w-full max-w-7xl mx-auto my-auto py-8 sm:py-12 lg:py-16">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-6 sm:space-y-8"
+        >
+          {/* Oversized Name Display */}
+          <div className="overflow-hidden">
+            <motion.h1
+              variants={itemVariants}
+              className="text-5xl sm:text-7xl md:text-8xl lg:text-[9.2vw] font-black uppercase tracking-[-0.04em] leading-[0.85] text-[#121212] select-none"
+            >
+              AMARACHUKWU
+            </motion.h1>
+          </div>
+
+          <div className="overflow-hidden">
+            <motion.h1
+              variants={itemVariants}
+              className="text-5xl sm:text-7xl md:text-8xl lg:text-[9.2vw] font-black uppercase tracking-[-0.04em] leading-[0.85] text-[#121212] select-none flex items-baseline justify-between flex-wrap gap-x-4"
+            >
+              <span>ONUOHA</span>
+              <span className="text-xs sm:text-sm md:text-base font-mono font-normal tracking-widest text-[#8C887D] self-end pb-2 hidden md:inline">
+                [ FULL-STACK / PRODUCT BUILDER ]
+              </span>
+            </motion.h1>
+          </div>
+
+          {/* Statement & Structured Metadata Grid */}
+          <motion.div
+            variants={itemVariants}
+            className="pt-8 sm:pt-12 border-t border-[#121212]/15 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+          >
+            {/* Left Statement */}
+            <div className="lg:col-span-7">
+              <p className="text-xl sm:text-2xl md:text-3xl font-medium tracking-[-0.02em] leading-snug text-[#121212] max-w-2xl">
+                Software engineer building digital products, interfaces and systems for the web.
+              </p>
+              <p className="mt-4 text-sm sm:text-base text-[#5C5A53] leading-relaxed max-w-xl">
+                Crafting robust web architectures with deliberate design sensibility. Turning complex mechanical backends into frictionless, tactile digital tools.
+              </p>
+            </div>
+
+            {/* Right Technical Metadata Column */}
+            <div className="lg:col-span-5 bg-[#FAF9F5] border border-[#121212]/15 p-5 sm:p-6 space-y-3 font-mono text-[11px] sm:text-xs">
+              <div className="flex justify-between items-center pb-2 border-b border-[#121212]/10 text-[#5C5A53]">
+                <span className="uppercase tracking-widest">SYSTEM PROFILE</span>
+                <span className="text-[#121212] font-semibold">AO-014</span>
+              </div>
+
+              <div className="flex justify-between items-baseline py-1">
+                <span className="text-[#5C5A53] tracking-wider uppercase">LOCATION</span>
+                <span className="font-semibold text-[#121212] text-right">LAGOS / NIGERIA</span>
+              </div>
+
+              <div className="flex justify-between items-baseline py-1">
+                <span className="text-[#5C5A53] tracking-wider uppercase">DISCIPLINE</span>
+                <span className="font-semibold text-[#121212] text-right">FULL-STACK ENGINEER</span>
+              </div>
+
+              <div className="flex justify-between items-baseline pt-2 border-t border-[#121212]/10">
+                <span className="text-[#5C5A53] tracking-wider uppercase">CURRENTLY BUILDING</span>
+                <a
+                  href="#currently-building"
+                  className="font-bold text-[#10B981] hover:underline flex items-center gap-1 group"
+                  data-cursor="INSPECT"
+                >
+                  <span>→ OUTREACHLY</span>
+                  <span className="inline-block transition-transform group-hover:translate-x-0.5">↗</span>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Bottom Ledger & Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="w-full max-w-7xl mx-auto pt-4 flex items-center justify-between font-mono text-[10px] sm:text-[11px] text-[#8C887D] tracking-widest uppercase border-t border-[#121212]/10"
+      >
+        <div className="flex items-center gap-3">
+          <span>EDITORIAL MONOGRAPH</span>
+          <span className="hidden sm:inline">•</span>
+          <span className="hidden sm:inline">PRECISION WEB ENGINEERING</span>
+        </div>
+
+        <a
+          href="#work"
+          className="group flex items-center gap-2 text-[#121212] hover:text-[#10B981] transition-colors py-1 cursor-pointer"
+          data-cursor="SCROLL"
+        >
+          <span className="tracking-widest">SCROLL TO EXPLORE</span>
+          <motion.span
+            animate={{ y: [0, 4, 0] }}
+            transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
+            className="inline-block text-[#10B981]"
+          >
+            ↓
+          </motion.span>
+        </a>
+      </motion.div>
     </section>
   );
 }

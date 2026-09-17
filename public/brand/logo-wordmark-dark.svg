@@ -1,0 +1,36 @@
+<svg viewBox="0 0 720 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="wm-keyway-dark">
+      <rect width="160" height="160" fill="white" />
+      <path d="M 35,136 L 75,26" stroke="black" stroke-width="28" stroke-linecap="square" />
+      <path d="M 99,62 A 38,38 0 0,1 123,99" stroke="black" stroke-width="28" stroke-linecap="round" />
+    </mask>
+  </defs>
+
+  <!-- Left Symbol Monogram (Scaled & Centered at x=20, y=0) -->
+  <g transform="translate(20, 0)">
+    <!-- O Torus Ring -->
+    <circle cx="80" cy="90" r="38" stroke="#FFFFFF" stroke-width="16" mask="url(#wm-keyway-dark)" />
+
+    <!-- A Chevron Arch: Left Leg & Apex -->
+    <path d="M 35,136 L 75,26 H 85" stroke="#FFFFFF" stroke-width="16" stroke-linecap="square" stroke-linejoin="miter" />
+
+    <!-- A Chevron Arch: Right Leg -->
+    <path d="M 85,26 L 125,136" stroke="#FFFFFF" stroke-width="16" stroke-linecap="square" mask="url(#wm-keyway-dark)" />
+
+    <!-- O Torus Ring Front Loop -->
+    <path d="M 104,68 A 38,38 0 0,1 121,102" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" />
+
+    <!-- The Keystone Crossbar (Vivid Neon Green) -->
+    <rect x="56" y="82" width="48" height="15" rx="3" fill="#39FF14" />
+  </g>
+
+  <!-- Right Typographic Lockup -->
+  <g transform="translate(190, 72)">
+    <!-- Primary Name Wordmark -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Geist Sans', 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" letter-spacing="-0.025em" fill="#FFFFFF" text-transform="uppercase">AMARACHUKWU ONUOHA</text>
+    
+    <!-- Secondary Discipline Monospace Subtitle -->
+    <text x="2" y="32" font-family="'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12.5" font-weight="600" letter-spacing="0.18em" fill="#39FF14" text-transform="uppercase">FULL-STACK ENGINEER • PRODUCT BUILDER</text>
+  </g>
+</svg>

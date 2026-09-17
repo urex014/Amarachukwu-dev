@@ -1,10 +1,5 @@
-import ProjectIDE from "../components/ProjectIDE";
+import { redirect } from 'next/navigation';
 
-
-export default function projects(){
-  return(
-    <main>
-      <ProjectIDE />
-    </main>
-  )
+export default function ProjectsPage() {
+  redirect('/#work');
 }
