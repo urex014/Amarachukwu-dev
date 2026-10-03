@@ -3,7 +3,7 @@ import CustomCursor from './components/CustomCursor';
 
 export default function Home() {
   return (
-    <main className="relative bg-[#F7F5F0] text-[#111111] selection:bg-[#B8FF00] selection:text-[#111111]">
+    <main className="relative bg-[#070707] text-[#F2F2F0] selection:bg-[#101010]/20 selection:text-white">
       {/* Interactive Desktop Magnetic Cursor */}
       <CustomCursor />
 

@@ -73,20 +73,20 @@ export default function CustomCursor() {
       <motion.div
         animate={{
           scale: isHovered ? (cursorText ? 2.6 : 1.6) : 1,
-          backgroundColor: isHovered ? 'rgba(184, 255, 0, 0.95)' : 'rgba(184, 255, 0, 0.85)',
+          backgroundColor: isHovered ? 'rgba(232, 232, 230, 0.95)' : 'rgba(232, 232, 230, 0.85)',
           boxShadow: isHovered 
-            ? '0 0 24px rgba(184, 255, 0, 0.75)' 
-            : '0 0 12px rgba(184, 255, 0, 0.45)',
+            ? '0 0 24px rgba(232, 232, 230, 0.75)' 
+            : '0 0 12px rgba(232, 232, 230, 0.45)',
         }}
         transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-        className="flex items-center justify-center rounded-full text-black text-[9px] font-mono tracking-wider backdrop-blur-[2px]"
+        className="flex items-center justify-center rounded-full text-white text-[9px] font-mono tracking-wider backdrop-blur-[2px]"
         style={{
           width: 14,
           height: 14,
         }}
       >
         {cursorText && (
-          <span className="text-[7px] font-bold uppercase tracking-widest text-black px-1 select-none">
+          <span className="text-[7px] font-bold uppercase tracking-widest text-white px-1 select-none">
             {cursorText}
           </span>
         )}

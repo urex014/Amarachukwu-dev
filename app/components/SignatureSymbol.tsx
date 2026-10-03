@@ -23,7 +23,7 @@ export default function SignatureSymbol({
   className = '',
   size = 20,
   color = 'currentColor',
-  accentColor = '#39FF14',
+  accentColor = '#E8E8E6',
   mono = false,
 }: SignatureSymbolProps) {
   const reactId = useId();

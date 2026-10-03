@@ -40,17 +40,17 @@ export default function CurrentlyBuilding() {
   const [activeTab, setActiveTab] = useState<'milestones' | 'logs'>('milestones');
 
   return (
-    <section id="currently-building" className="py-20 sm:py-28 lg:py-36 border-b border-[#121212]/15 bg-[#FAF9F5]">
+    <section id="currently-building" className="py-20 sm:py-28 lg:py-36 border-b border-white/10 bg-[#131313]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex items-center justify-between border-b border-[#121212]/15 pb-4 font-mono text-[11px] uppercase tracking-widest text-[#5C5A53]">
+        <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-[11px] uppercase tracking-widest text-[#8A8A8A]">
           <div className="flex items-center gap-2">
-            <SignatureSymbol size={14} className="text-[#121212]" />
+            <SignatureSymbol size={14} className="text-[#F2F2F0]" />
             <span>DEVLOG // REALTIME INITIATIVE</span>
           </div>
-          <div className="flex items-center gap-1.5 text-[#10B981] font-semibold">
-            <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
+          <div className="flex items-center gap-1.5 text-[#E8E8E6] font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#E8E8E6] animate-ping" />
             <span>ACTIVE SPRINTS</span>
           </div>
         </div>
@@ -58,78 +58,78 @@ export default function CurrentlyBuilding() {
         {/* Hero Editorial Announcement */}
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-7">
-            <div className="font-mono text-xs uppercase tracking-widest text-[#8C887D] mb-2">
+            <div className="font-mono text-xs uppercase tracking-widest text-[#707070] mb-2">
               [ PRIMARY FOCUS • 2026 ]
             </div>
-            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-[-0.03em] leading-none text-[#121212]">
+            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-[-0.03em] leading-none text-[#F2F2F0]">
               CURRENTLY BUILDING
             </h2>
 
             <div className="mt-8 space-y-4">
-              <div className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-[#10B981] flex items-center gap-2">
+              <div className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-[#E8E8E6] flex items-center gap-2">
                 <span>OUTREACHLY</span>
-                <span className="text-xs font-mono px-2 py-0.5 border border-[#10B981]/30 text-[#047857] font-medium tracking-widest">
+                <span className="text-xs font-mono px-2 py-0.5 border border-[#E8E8E6]/30 text-[#047857] font-medium tracking-widest">
                   STAGE: BETA
                 </span>
               </div>
 
               {/* Exact requested copy format */}
-              <div className="text-xl sm:text-2xl font-bold tracking-tight text-[#121212] leading-tight space-y-1">
+              <div className="text-xl sm:text-2xl font-bold tracking-tight text-[#F2F2F0] leading-tight space-y-1">
                 <p>Find businesses.</p>
                 <p>Start conversations.</p>
                 <p>Get clients.</p>
               </div>
 
-              <p className="text-sm sm:text-base text-[#5C5A53] leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base text-[#8A8A8A] leading-relaxed max-w-xl">
                 A platform I&apos;m building around targeted business discovery and outreach. Built to transform cold prospecting into a streamlined, high-signal conversational workflow for founders, builders, and service operators.
               </p>
             </div>
           </div>
 
           {/* Quick Telemetry Box */}
-          <div className="lg:col-span-5 bg-[#ECE8E0] border border-[#121212]/15 p-5 sm:p-6 font-mono text-[11px] space-y-3">
-            <div className="flex justify-between items-center pb-2 border-b border-[#121212]/10">
-              <span className="text-[#5C5A53] uppercase tracking-widest">RUNTIME TELEMETRY</span>
-              <span className="text-[#10B981] font-semibold flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
+          <div className="lg:col-span-5 bg-[#ECE8E0] border border-white/10 p-5 sm:p-6 font-mono text-[11px] space-y-3">
+            <div className="flex justify-between items-center pb-2 border-b border-white/10">
+              <span className="text-[#8A8A8A] uppercase tracking-widest">RUNTIME TELEMETRY</span>
+              <span className="text-[#E8E8E6] font-semibold flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#E8E8E6]" />
                 SYS_HEALTHY
               </span>
             </div>
 
-            <div className="flex justify-between py-1 border-b border-[#121212]/10">
-              <span className="text-[#5C5A53]">BRANCH:</span>
-              <span className="text-[#121212] font-bold">feat/sequence-ai-enrichment</span>
+            <div className="flex justify-between py-1 border-b border-white/10">
+              <span className="text-[#8A8A8A]">BRANCH:</span>
+              <span className="text-[#F2F2F0] font-bold">feat/sequence-ai-enrichment</span>
             </div>
 
-            <div className="flex justify-between py-1 border-b border-[#121212]/10">
-              <span className="text-[#5C5A53]">P95 LATENCY:</span>
-              <span className="text-[#121212] font-bold">184ms (EDGE LAGOS/EU)</span>
+            <div className="flex justify-between py-1 border-b border-white/10">
+              <span className="text-[#8A8A8A]">P95 LATENCY:</span>
+              <span className="text-[#F2F2F0] font-bold">184ms (EDGE LAGOS/EU)</span>
             </div>
 
-            <div className="flex justify-between py-1 border-b border-[#121212]/10">
-              <span className="text-[#5C5A53]">VERIFIED RECORDS:</span>
-              <span className="text-[#10B981] font-bold">12,480 DIRECTORY PROSPECTS</span>
+            <div className="flex justify-between py-1 border-b border-white/10">
+              <span className="text-[#8A8A8A]">VERIFIED RECORDS:</span>
+              <span className="text-[#E8E8E6] font-bold">12,480 DIRECTORY PROSPECTS</span>
             </div>
 
-            <div className="flex justify-between pt-1 text-[#5C5A53]">
+            <div className="flex justify-between pt-1 text-[#8A8A8A]">
               <span>TARGET RELEASE:</span>
-              <span className="text-[#121212] font-bold">Q4 2026 PRIVATE ACCESS</span>
+              <span className="text-[#F2F2F0] font-bold">Q4 2026 PRIVATE ACCESS</span>
             </div>
           </div>
         </div>
 
         {/* Live Devlog & Progress Ledger */}
-        <div className="mt-14 sm:mt-20 border border-[#121212]/15 bg-white p-6 sm:p-8 lg:p-10 shadow-sm">
+        <div className="mt-14 sm:mt-20 border border-white/10 bg-[#101010] p-6 sm:p-8 lg:p-10 shadow-sm">
           {/* Controls Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-[#121212]/15 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
             <div className="flex items-center gap-3">
               <button
                 type="button"
                 onClick={() => setActiveTab('milestones')}
                 className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 transition-all ${
                   activeTab === 'milestones'
-                    ? 'bg-[#121212] text-white font-bold'
-                    : 'bg-[#F4F2EB] text-[#5C5A53] hover:text-[#121212]'
+                    ? 'bg-[#F2F2F0] text-white font-bold'
+                    : 'bg-[#090909] text-[#8A8A8A] hover:text-[#F2F2F0]'
                 }`}
               >
                 SPRINT ROADMAP [78%]
@@ -139,15 +139,15 @@ export default function CurrentlyBuilding() {
                 onClick={() => setActiveTab('logs')}
                 className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 transition-all ${
                   activeTab === 'logs'
-                    ? 'bg-[#121212] text-white font-bold'
-                    : 'bg-[#F4F2EB] text-[#5C5A53] hover:text-[#121212]'
+                    ? 'bg-[#F2F2F0] text-white font-bold'
+                    : 'bg-[#090909] text-[#8A8A8A] hover:text-[#F2F2F0]'
                 }`}
               >
                 ENGINEERING CHANGELOG
               </button>
             </div>
 
-            <div className="font-mono text-[11px] text-[#8C887D]">
+            <div className="font-mono text-[11px] text-[#707070]">
               UPDATED DAILY DIRECTLY FROM GIT COMMITS
             </div>
           </div>
@@ -159,26 +159,26 @@ export default function CurrentlyBuilding() {
                 {milestones.map((milestone) => (
                   <div
                     key={milestone.id}
-                    className="p-4 bg-[#FAF9F5] border border-[#121212]/10 hover:border-[#121212]/30 transition-colors"
+                    className="p-4 bg-[#131313] border border-white/10 hover:border-white/10/30 transition-colors"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2.5">
                       <div className="flex items-center gap-2.5">
-                        <span className="text-[#8C887D] font-bold">[{milestone.id}]</span>
-                        <span className="text-[#121212] font-semibold text-sm">{milestone.title}</span>
+                        <span className="text-[#707070] font-bold">[{milestone.id}]</span>
+                        <span className="text-[#F2F2F0] font-semibold text-sm">{milestone.title}</span>
                       </div>
                       <div className="flex items-center gap-2 shrink-0">
                         <span
                           className={`px-2 py-0.5 text-[10px] font-bold uppercase ${
                             milestone.progress === 100
-                              ? 'bg-[#10B981]/15 text-[#047857] border border-[#10B981]/30'
+                              ? 'bg-[#E8E8E6]/15 text-[#047857] border border-[#E8E8E6]/30'
                               : milestone.progress >= 70
-                              ? 'bg-[#10B981]/15 text-[#047857] border border-[#10B981]/30'
-                              : 'bg-[#ECE8E0] text-[#5C5A53]'
+                              ? 'bg-[#E8E8E6]/15 text-[#047857] border border-[#E8E8E6]/30'
+                              : 'bg-[#ECE8E0] text-[#8A8A8A]'
                           }`}
                         >
                           {milestone.status}
                         </span>
-                        <span className="text-[#8C887D] text-[11px]">{milestone.progress}%</span>
+                        <span className="text-[#707070] text-[11px]">{milestone.progress}%</span>
                       </div>
                     </div>
 
@@ -190,7 +190,7 @@ export default function CurrentlyBuilding() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                         className={`h-full ${
-                          milestone.progress === 100 ? 'bg-[#10B981]' : 'bg-[#10B981]/70'
+                          milestone.progress === 100 ? 'bg-[#E8E8E6]' : 'bg-[#E8E8E6]/70'
                         }`}
                       />
                     </div>
@@ -202,19 +202,19 @@ export default function CurrentlyBuilding() {
                 {devlogs.map((log) => (
                   <div
                     key={log.hash}
-                    className="p-5 bg-[#FAF9F5] border border-[#121212]/10 hover:border-[#10B981] transition-colors"
+                    className="p-5 bg-[#131313] border border-white/10 hover:border-[#E8E8E6] transition-colors"
                   >
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-2 border-b border-[#121212]/10 text-xs">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pb-2 border-b border-white/10 text-xs">
                       <div className="flex items-center gap-2">
-                        <span className="font-bold text-[#10B981]">{log.hash}</span>
-                        <span className="text-[#121212] font-bold">{log.title}</span>
+                        <span className="font-bold text-[#E8E8E6]">{log.hash}</span>
+                        <span className="text-[#F2F2F0] font-bold">{log.title}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-[10px] text-[#8C887D]">
-                        <span className="px-1.5 py-0.5 bg-[#ECE8E0] uppercase text-[#121212]">{log.tag}</span>
+                      <div className="flex items-center gap-2 text-[10px] text-[#707070]">
+                        <span className="px-1.5 py-0.5 bg-[#ECE8E0] uppercase text-[#F2F2F0]">{log.tag}</span>
                         <span>{log.timestamp}</span>
                       </div>
                     </div>
-                    <p className="mt-2 text-xs sm:text-sm text-[#5C5A53] leading-relaxed font-sans">
+                    <p className="mt-2 text-xs sm:text-sm text-[#8A8A8A] leading-relaxed font-sans">
                       {log.body}
                     </p>
                   </div>

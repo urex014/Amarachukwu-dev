@@ -3,17 +3,17 @@
 
 @layer base {
   :root {
-    --paper: #F7F5F0;
+    --paper: #070707;
     --paper-card: #FFFFFF;
     --paper-alt: #ECE9E1;
-    --ink: #111111;
+    --ink: #F2F2F0;
     --ink-muted: #55534E;
     --ink-subtle: #8C887D;
-    --accent-lime: #B8FF00; /* Outreachly Acid Lime */
-    --accent-green: #10B981; /* Outreachly Emerald Green */
+    --accent-lime: #E8E8E6; /* Outreachly Acid Lime */
+    --accent-green: #E8E8E6; /* Outreachly Emerald Green */
     --accent-neon: #39FF14; /* Monogram Keystone Green */
     --accent-orange: #FF5722;
-    --accent-dark: #121212;
+    --accent-dark: #F2F2F0;
   }
 
   html {
@@ -35,13 +35,13 @@
     color: var(--ink);
     min-height: 100dvh;
     position: relative;
-    selection-background-color: var(--accent-lime);
-    selection-color: #111111;
+    selection-background-color: rgba(255, 255, 255, 0.2);
+    selection-color: #F2F2F0;
   }
 
   ::selection {
-    background-color: #B8FF00;
-    color: #111111;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #F2F2F0;
   }
 }
 
@@ -52,17 +52,17 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F7F5F0;
+  background: #070707;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B8FF00;
-  border: 1px solid #111111;
+  background: #E8E8E6;
+  border: 1px solid #F2F2F0;
   border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #111111;
+  background: #F2F2F0;
 }
 
 /* Subtle Film Grain Texture Overlay */
